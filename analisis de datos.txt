@@ -1,0 +1,24 @@
+analisis de datos
+
+los datos a gran escala (big data) se definen como las bd cuyo tamaño esta mas alla de la capacidad del software tradicional para su manejo
+
+objetivos del analisis de datos:
+desarrollar pensamiento critico
+identificar
+
+
+simensiones para el analisis de datos (4v's): 
+ volumen 
+ velocidad
+ variedad
+ veracidad
+
+ la dimension del volumen se refiere al tamoaño de los datos
+ la velocidad se refiere al tiempo bajo elcual es pertienente analizar datos e informacion
+ la variedad se refiere a los diferentes tipos de datos que se recolectan
+ la veracidad se refiere a la certidumbre asociada a esos datos. considera las alteraciones a los datos
+
+
+conocimiento: 
+
+tarea: prponer 3 aspectos a implementar en la escom
