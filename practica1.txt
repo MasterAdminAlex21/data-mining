@@ -1,0 +1,22 @@
+portada 
+ practica 1: obtencion de informacion a traves de funciones agregadas
+
+introduccion definicion avg, min, max, group by, view
+
+desarrollo
+ consulta 1 : sentencia y codigo, y la pantalla de resultado
+
+conclusiones
+
+ delimiter #;
+ create procedure peli_cat(in categoria varchar(45))
+ begin
+ select x.nombre as 'categoria', count(*) as 'num_pelis'
+ from pelicula p join categoria c 
+ on p.idcat=c.idcategoria and c.nombre like categoria;
+ end#
+
+ call peli_categoria('Terror');
+
+
+ repasar llave foranea en sql, y load data
