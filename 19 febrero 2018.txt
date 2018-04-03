@@ -1,0 +1,18 @@
+el analisis y manejo de datos para la toma de decisiones
+
+tarea: 
+
+leer : data scientist: the sexiest job of the 21st century, yentregar una conclusion (a mano) para la siguiente clase
+
+
+en el actual entorno de negocios, las empresas compiten mediante el analisis de datos.
+
+vivimos en una sociedad que genera datos a cada momento. las empresas toman decisiones basadasen la explotacion de todos estos datos.
+
+todo este proceso inicia la recoleccion y limpieza de dichos datos
+
+->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>herramienta: watson analytics de IBM|
+
+ ___
+| KDD |  -> proceso de descubrimiento de conocimiento
+
