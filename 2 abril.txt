@@ -1,0 +1,83 @@
+la extraccion de conocimiento a partir de datos tiene como objetivo descubrir patrones, entre otras cosas deben ser:
+ -validos
+ -novedosos
+ -interesantes
+ -comprensibles
+
+el proceso de la mineria de datos convierte datos en conocimiento.
+
+una trea en mineria de datos es por ejemplo "clasificar las piezas al proveedor X en optimas, defectuosas reparables y defectuosas irreparables".
+
+tareas mas importantes en mineria de datos
+ I. predictivas: se trata de problemas y tareas en las que hay que predecir uno o mas ejemplos
+    los ejemplos en la evidencia van acompañados de una salida 
+    (clase, categoria o valor numerico)
+    ejemplos:
+     -clasificacion(discriminacion) -> un de las tareas mas frecuentes en la mineria de datos
+     -clasificar un mensaje de correo electronico como spam o no
+     -clasificar varios medicamentos¿cual es el mejor para determinada patologia?
+
+   1. clasificacion suave
+     clasificar un mensaje de correo electronico como spam o no, proporcionando ademas la certeza de laclasificacion
+   2. estimacion de la probabilidad
+     dado el problema de clasificar entre varios medicamentos, cual es  el mejor para una determinada patologia, proporcionar la probabilidad de que sea  cada uno de los medicamentos
+   3. categorizacion 
+     dado un conjunto de documentos, asignar categorias de los temas que trata cada documento, dados un conjunto de perfiles de clientes, determinar los productos que pueden comprar
+   4. preferencias o priorizacion:
+     determinar a partir de 2 o masejemplos un orden de preferencia. p.e, dados una serie de candidatos para un trabajo, dar orden priorizado paracubrir el puesto
+   5. regresion
+     estimar las ventas del 2018, predecir el numero de unidades defectuosas de una partida de productos, predecir  la presion de una valvula a partir de las entradas.
+     la regresion es quiza la tarea mas sencilla de definir
+     la regresion se conoce con otros nombres: interpolacion(generalmente cuando e valor predico esta en medio o atras) o estimacion(cuando se trata de algo a futuro)
+  
+  II. descriptivas: el objetivo no es predecir nuevos datos si no describir los existentes
+    1. agrupamiento(clustering)
+      el objetivo de esta tarea es obtener grupos o conjuntos entre los elementos, de tal manera que los elementos asignados al mismo grupo sean similares. lo importante del agrupamiento respecto al a clasificacion es que son precisamente los grupos y la pertenencia a los grupos lo que se quiere determinar a priori, nose sabe ni como son los grupos ni cuantos hay.
+      ejemplo: podemos agrupar los clientes en segmentos diferenciados, estudiar que grupos se comportan mejor ante determinados productos, y despues orientar ciertos productos a ciertos grupos.
+      el agrupamiento se conoce muy frecuentemente por su termino en ingles: clustering
+
+
+reglas de asociacion: 
+son una manera muy popular de expresar patrones de datos de una BD.estos patrones pueden servir para conocer el comportamiento general del problema que genera la BD, y de esta manera, se tenga mas informacion que pueda asistir en la toma de decisiones..
+
+p.e. : en un supermercado, podemos conocer que productos suelen comprarse conjuntamente, y asi mejorar la distribucion de los producos en estanterias. en un servidor web, podemos conocer cuales son los itinerarios mas seguidos por los visitantes a las paginas web, y entonces utilizar esta informacion para estructurar las paginas web en el servidor.
+
+una regla de asociacion es una proposicion probabilistica sobre la ocurrencia de ciertos estados en una base de datos.
+
+en las reglas de asociacion, en la parte derecha puede aparecer cualquier atributo y ademas puede aparecer mas de 1 atributo
+
+ej: SI bizcochos "golozo" Y horchata "Xufer" ENTONCES galletas "trigo"
+
+da dauna regla de asociacion, se suele trabajar con 2 medidas para conocer la calidad de la regla: 
+  ->cobertura(support)
+  ->confianza(confidence)
+la cobertura se define como el numero de instancias que la regla predice correctamente.
+la confianza, tambien llamada precision, mide el porcentaje de veces que la regla se cumple y cuando se puede aplicar
+
+podemos tener reglas que trabajan con atributos binarios que indican la precensia o ausencia de un item.
+
+hay sistemas que trabajan con atributos con mas de 2 valores o reglas que contemplan atributos numericos
+
+dimensiones de los datos: 
+
+ la regla:
+  SI comprar (vino "caminando")
+  ENTONCES comprar (gaseosa "chispa")
+ 
+ se refiere a tan solo una dimension que corresponde al hecho de aparecer o no en el carrito de compras. 
+ podemos incrementar las dimensiones de una regla incluyendo, la dimension tiempo, o la dimension cliente
+
+ SI comprar(vino "caminando"), cliente("juan"), tiempo (marzo)
+ ENTONCES comprar(gaseosa "chispa")
+
+ algunos sistemas o algoritmos permiten incorporar a las reglas diferentes niveles de abstraccion, representados por conceptos que engloban otros conceptos o items. este tipo de reglas se conocen como reglas multinivel.
+ ej: SI comprar (vino)
+ ENTONCES comprar (gaseosa)
+
+ otra caracteristica es que so instantaneas o secuenciales, depende si se consideran relaciones en un instante de tiempo, p.e.  una determinada compra, o una compra o visita a una pagina web.
+
+ las reglasde asociacion y dependencia se caracterizan precisamente por el hecho de que se expresan en forma de reglas de tipo SI ... ENTONCES, y que los algoritmos tiemen como objetivo primordial la eficiencia.
+
+ el aprendizaje de reglas de asociacion se basa en su confianza y su cobertura
+
+ los agoritmos de aprendizaje trabajan en la busqueda de reglas que cumplan unos requisitos minimos de estas medidas
