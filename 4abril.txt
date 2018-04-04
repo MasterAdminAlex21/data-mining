@@ -1,0 +1,78 @@
+un algoritmo de aprendizaje de reglas de asociacion muy simple es el algoritmo a priori. se basa en la busqueda de los conjuntos de items con determinada cobertura.
+
+se construyen los conjuntos formados por 1 solo item que tiene la cobertura minima.
+
+este conjunto de conjuntos se utiliza para construir el conjunto de conjutos de 2 items, y asi sucesivamente hasta que se llegue a un tamaño en el cual no existan conjuntos de items con la cobertura requerida
+
+revisar la imgn del correo
+
+cobertura minima: 2
+c1={vino cabezon}                  )
+c2={gaseosa chispa}             |
+c3={vino tio paco}                  \
+c4={horchata xufer}                > agrupacion 1 item
+c5={bizcochos goloso}          /
+c6={galletas trigo}                 |
+c7={chocolate la vaca}          )
+
+
+
+7C2(combinatorio)  cobertura =3    ->  42 combinaciones, solo 15 conjuntos
+
+c1={vino cabezon,gaseosa chisoa}                                         
+c2={vino cabezon, bizcocho goloso}
+c3={   "           "      ,galletas trigo}
+c4={   "            "     , chocolate la vaca} 
+c5={gaseosa chispa, vino tio paco}
+c6={      "            "     , horchata xufer}  
+c7={      "            "     , bizcocho goloso}
+c8={      "            "     , galletas trigo}                              agrupacion 2 items
+c9={      "            "     , chocolate la vaca}
+c10={horchata xufer, bizcocho goloso}
+c11={      "            "     , galletas trigo}
+c12={      "            "     , chocolate la vaca}
+c13={bizcocho goloso,galletas trigo}
+c14={      "            "     , chocolate la vaca}
+c15={galletas trigo,chocolate la vaca}
+
+c1={vino cabezon, gaseosa chispa, biscochos goloso}
+
+
+una vez que se han seleccionado los conjuntos de items que cumplen con la cobertura minima, el siguiente paso consiste en extraer de este conjunto de reglas las que tengan un nivel de confianza minimo, p.e. el conjunto horchata xufer Y bizcochos goloso Y galletas trigo podems extraer las siguientes reglas:
+
+ 1. SI bizcocho goloso Y horchata xufer ENTONCES galletas trigo
+ 2. SI bizcocho goloso Y galletas trigo ENTONCES horchata xufer
+ 3. SI galletas trigo Y horchata xufer ENTONCES bizcocho goloso 
+ 4. SI galletas trigo ENTONCES bizcocho goloso y horchata xufer 
+ 5. SI biscocho goloso ENTONCES horchata ufer Y galletas trigo
+ 6. SI horchata xufet ENTONCES bizcocho goloso y galletas trigo
+
+1. Cb(cobertura)=4 ->las vecees que bizcocho y horchata coinciden
+   Cf(confianza)=3/4=75%
+
+2. Cb=3
+    Cf=3/3=100%
+
+3. Cb=3
+    Cf=3/3=100%
+
+4. Cb=6
+    cf=3/6=50%
+
+5. Cb=6
+    cf=3/6=50%
+
+6. Cb=4
+    cf=3/4=75%
+
+7. Cb=10
+    cf=3/10=30%
+
+
+para cada regla hemos incluido su cobertura y confianza. si fijamos a confianza minima en el 100, solo seleccionariamos a segunda y 3a regla.
+
+el aprendizaje de reglas de asociacion se divide normalment en 2 fases:
+ -la extraccion de los conjuntos de items que cumplan con la cobertura requerida desde os datos y la generacion de las reglas a partir de estos conjuntos.
+
+ tarea: elegir otro conjunto, y establecer reglas y obrtener cobertura y confianza
+ sw a utilizar:weka
