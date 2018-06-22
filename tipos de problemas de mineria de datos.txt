@@ -1,0 +1,21 @@
+tipos de problemas de mineria de datos
+
+describen objetivos especificos con los que debera tratar a lo largo del proyecto
+
+segmentacion:
+ dependiendo de
+ tecnicas utiizadas: clustering(agrupamiento), redes neuronales, visualizacion
+
+descripcion de conceptos
+ tecnicas utiliadas: reglas de induccion, agrupamiento conceptual
+
+clasificacion
+ dependiendo de los datos con los que se cuenten, se pueden clasificar los clientes para desarrollar un nuevo sistema
+ tecnicas: analisis discriminante, arboles de decision, reglas de induccion, redes neuronales, k-vecino mas cercano, algoritmos geneticos, razonamiento basado en casos
+
+prediccion
+ situacion estimada de la empresa a futuro, con base en datos como publicidad, tipo de cambio 
+ tecnicas: analisis de regresion, redes neuronales, algoritmos geneticos, arboles de regresion, k-vecino mas cercano, metodos de la caja de jenkins
+
+analisis de dependencia
+ anlisis correlacional,, de regresion, redes bayesianas, reglas de asociacion, programas de logica inductiva, tecnicas de visualizacion

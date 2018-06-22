@@ -1,0 +1,11 @@
+weka:
+
+libro pagina oficial
+
+utiliza archivos .arrf
+
+estrutura: 
+@RELATiON nombre
+@ATTRIBUTE VARIABLE {valor,dividido,comas}
+@DATA
+
